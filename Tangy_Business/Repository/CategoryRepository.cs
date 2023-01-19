@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tangy_Business.Repository.IRepository;
+using Tangy_DataAccess;
 using Tangy_DataAccess.Data;
 
 namespace Tangy_Business.Repository
@@ -19,7 +20,19 @@ namespace Tangy_Business.Repository
 
         public CategoryDTO Create(CategoryDTO objDTO)
         {
-            throw new NotImplementedException();
+            Category category = new Category()
+            {
+                Name = objDTO.Name,
+                Id = objDTO.Id,
+                CreatedDate = DateTime.Now
+            };
+            _db.Categories.Add(category);
+            _db.SaveChanges();
+            return new CategoryDTO()
+            {
+                Id = category.Id,
+                Name = category.Name
+            };
         }
 
         public CategoryDTO Delete(int id)
