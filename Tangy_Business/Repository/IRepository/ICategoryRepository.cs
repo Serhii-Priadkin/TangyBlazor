@@ -10,7 +10,7 @@ namespace Tangy_Business.Repository.IRepository
     {
         public CategoryDTO Create(CategoryDTO objDTO);
         public CategoryDTO Update(CategoryDTO objDTO);
-        public CategoryDTO Delete(int id);
+        public int Delete(int id);
         public CategoryDTO Get(int id);
         public IEnumerable<CategoryDTO> GetAll();
     }
