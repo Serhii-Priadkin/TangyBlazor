@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Tangy_Business.Repository.IRepository;
 using Tangy_DataAccess;
 using Tangy_DataAccess.Data;
+using Tangy_Models;
 
 namespace Tangy_Business.Repository
 {

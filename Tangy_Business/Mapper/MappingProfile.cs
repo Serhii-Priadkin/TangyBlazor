@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tangy_Business.Repository.IRepository;
 using Tangy_DataAccess;
+using Tangy_Models;
 
 namespace Tangy_Business.Mapper
 {
